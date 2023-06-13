@@ -1,0 +1,30 @@
+openapi: 3.0.0
+info:
+  title: simple-api
+  version: 0.0.1
+  contact:
+    name: API Support
+    url: https://chutes.io/support
+    email: support@chutes.io
+  license:
+    name: Apache 2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0.html
+x-kusk:
+  mocking:
+    enabled: true
+paths:
+  /hello:
+    get:
+      summary: Responds by greeting hello world
+      responses:
+        '201':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  name:
+                    type: string
+              example:
+                message: “Hello world”
